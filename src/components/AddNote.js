@@ -18,6 +18,7 @@ class AddNote extends React.Component {
             this.props.dispatch(addNote({
                 title:e.target.elements.titleInp.value
             }))
+            e.target.elements.titleInp.value=''
         }
 
     }
@@ -26,7 +27,7 @@ class AddNote extends React.Component {
         return(
             <Div>
                 <Add onSubmit={this.onSubmit} >
-                    <AddInp id='titleInp' placeholder="Title"/>
+                    <AddInp name='titleInp' placeholder="Title"/>
                     <AddBtn >
                         Add note
                     </AddBtn>
