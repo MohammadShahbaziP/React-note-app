@@ -48,6 +48,7 @@ const NoteTitle = styled.p`
  margin:0;
  font-size:1.2rem;
  font-weight:bold;
+ word-break:break-all;
  
 
 
@@ -74,6 +75,10 @@ const TextInp = styled.textarea`
  color:var(--primary);
  font-size:2rem;
  font-weight:bold;
+ @media(max-width:500px){
+    font-size:1rem;
+    font-weight:500;
+ }
 
 `
 
@@ -81,6 +86,7 @@ const Trash = styled(FaTrash)`
  color:var(--danger);
  cursor:pointer;
  font-size:1.2rem;
+ 
 `
 
 const NoteContainer = styled.div`
