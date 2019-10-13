@@ -4,6 +4,8 @@ import { FaTrash } from 'react-icons/fa'
 import {connect} from 'react-redux'
 import { removeNote,editNote } from '../actions/notes'
 
+
+
 class Note extends React.Component {
 
     removeNote=()=>{
@@ -19,18 +21,19 @@ class Note extends React.Component {
     }
     render(){
         return(
-            <NoteContainer>
-                <NoteBar>
-                    <NoteTitle >
-                    {this.props.note.title}
-                    </NoteTitle>
-                        <Trash onClick={this.removeNote} />
 
-                </NoteBar> 
-                <NoteBody>
-                    <TextInp placeholder="Note body" defaultValue={this.props.note.note} onChange={this.bodyChange}></TextInp>
-                </NoteBody>
-            </NoteContainer>
+                <NoteContainer>
+                    <NoteBar>
+                        <NoteTitle >
+                        {this.props.note.title}
+                        </NoteTitle>
+                            <Trash onClick={this.removeNote} />
+
+                    </NoteBar> 
+                    <NoteBody>
+                        <TextInp placeholder="Note body" defaultValue={this.props.note.note} onChange={this.bodyChange}></TextInp>
+                    </NoteBody>
+                </NoteContainer>
         )
     }
 }
